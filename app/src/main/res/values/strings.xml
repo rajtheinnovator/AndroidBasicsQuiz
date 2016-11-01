@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Android Basics Quiz</string>
+    <string name="main_screen_message">Hi, this is a quiz app, which is designed to let you know if you know the basics of Android
+        development and you\'re ready to learn the advance concepts.</string>
+    <string name="question1">Which language you must know to learn the Android Development?</string>
+    <string name="question2">Which intent do you use to jump to another activity in the same app?</string>
+    <string name="implicitIntent">Implicit</string>
+    <string name="explicitIntent">Explicit</string>
+    <string name="question3">Which IDE can be used for Android development?</string>
+    <string name="eclipse">Eclipse</string>
+    <string name="androidStudio">Android Studio</string>
+    <string name="intelliJ">IntelliJ</string>
+    <string name="allOfThese">All of these</string>
+    <string name="question4">The class which is completely un-implemented is called?</string>
+    <string name="question5">The class which is partially implemented is called?</string>
+    <string name="question6">Which of them can you implement on your own, confidently?</string>
+    <string name="array">Array</string>
+    <string name="listView">ListView</string>
+    <string name="loops">Loops</string>
+    <string name="customClasses">Custom Classes</string>
+    <string name="question7">How confident do you feel in searching for the solution of problems you feel while development?</string>
+    <string name="notConfident">Not Confident</string>
+    <string name="somewhatConfident">Somewhat Confident</string>
+    <string name="extreamlyConfident">Extreamly Confident</string>
+</resources>
