@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private int score = 0;  //storing the quiz score in a private variable
-
+    int emailScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void mailResult(View view) {
-        // Setting eMail intent
-        Intent email = new Intent(Intent.ACTION_SENDTO);
-        email.setData(Uri.parse("mailto:"));
-        email.putExtra(Intent.EXTRA_TEXT, message(score));
-        email.putExtra(Intent.EXTRA_SUBJECT, "Result");
-        if (email.resolveActivity(getPackageManager()) != null) {
-            startActivity(email);
-        }
-    }
+
 
     public void submitResponse(View view) {
         //2nd question
@@ -170,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
         resultTextview.setText(message(score));
         Button emailButton = (Button) findViewById(R.id.mailResult);
         emailButton.setVisibility(View.VISIBLE);
+        emailScore = score;
         score = 0;
     }
 
@@ -185,5 +177,14 @@ public class MainActivity extends AppCompatActivity {
         }
         return finalMessage;
     }
-
+    public void mailResult(View view) {
+        // Setting eMail intent
+        Intent email = new Intent(Intent.ACTION_SENDTO);
+        email.setData(Uri.parse("mailto:"));
+        email.putExtra(Intent.EXTRA_TEXT, message(emailScore));
+        email.putExtra(Intent.EXTRA_SUBJECT, "Result");
+        if (email.resolveActivity(getPackageManager()) != null) {
+            startActivity(email);
+        }
+    }
 }
