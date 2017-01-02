@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
         email.setData(Uri.parse("mailto:"));
         email.putExtra(Intent.EXTRA_TEXT, message(emailScore));
         email.putExtra(Intent.EXTRA_SUBJECT, "Result");
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"raj@ymail.com"});
         if (email.resolveActivity(getPackageManager()) != null) {
             startActivity(email);
         }
